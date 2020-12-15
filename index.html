@@ -9,19 +9,23 @@
         <title>Slider | Vue</title>
     </head>
     <body>
-        <div class="container">
-            <div class="slider-wrapper">
-                <div class="prev">
-                   <i class="fas fa-angle-left"></i>
-                </div>
-                <div class="images">
-                    <img class="active" src="" alt="">
-                </div>
-                <div class="next">
-                    <i class="fas fa-angle-right"></i>
-                </div>
-                <div class="nav">
-                    <i class="fas fa-circle"></i>
+        
+        <div id="app">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="prev">
+                       <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="images">
+                        <img class="active" :src="images[counter]" alt="">
+                    </div>
+                    <div class="next" v-on:click="next">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+
+                    <div class="nav">
+                        <i class="fas fa-circle"></i>
+                    </div>
                 </div>
             </div>
         </div>
