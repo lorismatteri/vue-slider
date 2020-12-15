@@ -7,7 +7,8 @@ let app = new Vue ({
             './img/bugatti.jpg',
             './img/model-s.jpg',
             './img/s60-polestar.png',
-            './img/superveloce.jpg'
+            './img/superveloce.jpg',
+            './img/mx-5.jpg'
         ]
     },
     methods: {
