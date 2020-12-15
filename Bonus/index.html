@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Slider | Vue | Bonus</title>
+    </head>
+    <body>
+        
+        <div id="app">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="prev" v-on:click="prev">
+                       <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="images">
+                        <img class="active" :src="images[counter]" alt="">
+                    </div>
+                    <div class="next" v-on:click="next">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+
+                    <div class="nav">
+                        <i class="fas fa-circle" :class="(index === counter) ? 'active' : '' " v-for="(image, index) in images"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <!-- JS -->
+        <script src="main.js"></script>
+    </body>
+</html>
